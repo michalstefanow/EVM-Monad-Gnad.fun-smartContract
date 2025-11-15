@@ -1,6 +1,6 @@
 # Test Suite
 
-This directory contains comprehensive test files for the pumpnad.fun contracts using Foundry's Forge testing framework.
+This directory contains comprehensive test files for the GNad.Fun contracts using Foundry's Forge testing framework.
 
 ## Test Files
 
@@ -50,7 +50,7 @@ forge test
 
 ### Run specific test file:
 ```bash
-forge test --match-path test/WMon.t.sol
+forge test --match-path tests/WMon.t.sol
 ```
 
 ### Run with verbosity:

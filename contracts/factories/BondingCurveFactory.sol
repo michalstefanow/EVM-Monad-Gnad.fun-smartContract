@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 pragma solidity ^0.8.20;
 
-import {IBondingCurve} from "./interfaces/IBondingCurve.sol";
-import {IBondingCurveFactory} from "./interfaces/IBondingCurveFactory.sol";
-import {IToken} from "./interfaces/IToken.sol";
-import {Token} from "./Token.sol";
-import {BondingCurve} from "./BondingCurve.sol";
-import "./errors/CustomErrors.sol" as CustomErrors;
+import {IBondingCurve} from "../types/IBondingCurve.sol";
+import {IBondingCurveFactory} from "../types/IBondingCurveFactory.sol";
+import {IToken} from "../types/IToken.sol";
+import {Token} from "../tokens/Token.sol";
+import {BondingCurve} from "../core/BondingCurve.sol";
+import "../errors/CustomErrors.sol" as CustomErrors;
 
 /**
  * @title BondingCurveFactory

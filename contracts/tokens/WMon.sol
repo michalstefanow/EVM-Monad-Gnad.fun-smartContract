@@ -3,7 +3,7 @@ pragma solidity ^0.8.13;
 
 import {ERC20Permit} from "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol";
 import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import {IWMon} from "./interfaces/IWMon.sol";
+import {IWMon} from "../types/IWMon.sol";
 
 /**
  * @title WMon

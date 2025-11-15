@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
-import {IFeeVault} from "./interfaces/IFeeVault.sol";
-import {IWMon} from "./interfaces/IWMon.sol";
+import {IFeeVault} from "../types/IFeeVault.sol";
+import {IWMon} from "../types/IWMon.sol";
 
 /**
  * @title FeeVault

@@ -7,11 +7,11 @@ import {IUniswapV2Factory} from "@uniswap/v2-core/contracts/interfaces/IUniswapV
 import {IUniswapV2Pair} from "@uniswap/v2-core/contracts/interfaces/IUniswapV2Pair.sol";
 import {IUniswapV2ERC20} from "@uniswap/v2-core/contracts/interfaces/IUniswapV2ERC20.sol";
 
-import {IToken} from "./interfaces/IToken.sol";
-import {IGNad} from "./interfaces/IGNad.sol";
-import {IBondingCurveFactory} from "./interfaces/IBondingCurveFactory.sol";
-import {IBondingCurve} from "./interfaces/IBondingCurve.sol";
-import "./errors/CustomErrors.sol" as CustomErrors;
+import {IToken} from "../types/IToken.sol";
+import {IGNad} from "../types/IGNad.sol";
+import {IBondingCurveFactory} from "../types/IBondingCurveFactory.sol";
+import {IBondingCurve} from "../types/IBondingCurve.sol";
+import "../errors/CustomErrors.sol" as CustomErrors;
 
 /**
  * @title BondingCurve

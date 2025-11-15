@@ -221,13 +221,13 @@ forge test
 forge test -vv
 
 # Run specific test file
-forge test --match-path test/WMon.t.sol
+forge test --match-path tests/WMon.t.sol
 
 # Run with gas reporting
 forge test --gas-report
 ```
 
-See [test/README.md](test/README.md) for more testing information.
+See [tests/README.md](tests/README.md) for more testing information.
 
 ## Development Information
 
@@ -237,6 +237,27 @@ This smart contract system is designed to create and manage bonding curve-based 
 - **Foundry**: For development and testing
 - **OpenZeppelin**: For ERC20 and ERC20Permit implementations
 - **Uniswap V2**: For DEX integration after listing
+
+### Quick Start
+
+```bash
+# Install dependencies
+make install
+
+# Build the project
+make build
+
+# Run tests
+make test
+
+# Format code
+make fmt
+
+# Deploy contracts (requires .env file)
+make deploy RPC_URL=<your_rpc_url>
+```
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed development guidelines.
 
 ### Key Features
 
@@ -250,21 +271,42 @@ This smart contract system is designed to create and manage bonding curve-based 
 ### Project Structure
 
 ```
-src/
-├── GNad.sol                 # Main contract
-├── BondingCurve.sol         # Bonding curve implementation
-├── BondingCurveFactory.sol  # Factory for creating curves
-├── WMon.sol                 # Wrapped Monad token
-├── Token.sol                # ERC20 token implementation
-├── FeeVault.sol             # Multisig fee vault
-├── lib/                     # Utility libraries
-│   ├── BCLib.sol           # Bonding curve calculations
-│   └── Transfer.sol        # Safe transfer utilities
-├── interfaces/              # Contract interfaces
-└── errors/                  # Error definitions
-
-test/
-└── *.t.sol                  # Test files
+.
+├── contracts/                # Smart contract source code
+│   ├── core/                # Core business logic contracts
+│   │   ├── GNad.sol        # Main orchestrator contract
+│   │   └── BondingCurve.sol # Bonding curve implementation
+│   ├── tokens/              # Token contracts
+│   │   ├── WMon.sol        # Wrapped Monad token
+│   │   └── Token.sol        # ERC20 token with permit
+│   ├── factories/           # Factory contracts
+│   │   └── BondingCurveFactory.sol  # Curve factory
+│   ├── vaults/             # Vault contracts
+│   │   └── FeeVault.sol     # Multisig fee vault
+│   ├── types/               # Interface definitions
+│   │   ├── IBondingCurve.sol
+│   │   ├── IBondingCurveFactory.sol
+│   │   ├── IFeeVault.sol
+│   │   ├── IGNad.sol
+│   │   ├── IToken.sol
+│   │   └── IWMon.sol
+│   ├── utils/               # Utility libraries
+│   │   ├── BCLib.sol       # Bonding curve math
+│   │   └── Transfer.sol    # Safe transfer helpers
+│   └── errors/              # Custom error definitions
+│       └── CustomErrors.sol
+├── tests/                    # Test suite
+│   └── *.t.sol              # Foundry test files
+├── scripts/                  # Deployment & utility scripts
+│   └── Deploy.s.sol         # Main deployment script
+├── lib/                      # External dependencies
+├── .github/                  # GitHub workflows
+│   └── workflows/
+│       └── ci.yml           # CI/CD pipeline
+├── foundry.toml             # Foundry configuration
+├── Makefile                 # Development tasks
+├── LICENSE                   # MIT License
+└── README.md                # This file
 ```
 
 📌 For questions or support, please open an issue in the GitHub repository.

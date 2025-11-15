@@ -1,6 +1,37 @@
 [profile.default]
-src = "src"
+src = "contracts"
 out = "out"
 libs = ["lib"]
+test = "tests"
+script = "scripts"
+
+# Optimizer settings
+optimizer = true
+optimizer_runs = 200
+via_ir = false
+
+# Metadata
+bytecode_hash = "ipfs"
+
+# Extra output
+extra_output = ["abi", "evm.bytecode", "evm.deployedBytecode"]
+extra_output_files = ["abi", "evm.bytecode", "evm.deployedBytecode"]
+
+# Gas reporting
+gas_reports = ["*"]
+
+# Fuzz settings
+fuzz = { runs = 256 }
+
+# Test settings
+[profile.default.test]
+fuzz = { runs = 256 }
+invariant = { runs = 256 }
+
+# CI profile
+[profile.ci]
+fuzz = { runs = 10000 }
+invariant = { runs = 10000 }
+optimizer_runs = 1000
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options

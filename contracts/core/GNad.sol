@@ -4,14 +4,14 @@ pragma solidity ^0.8.13;
 import {IERC20} from "@openzeppelin/contracts/interfaces/IERC20.sol";
 import {IERC20Permit} from "@openzeppelin/contracts/token/ERC20/extensions/IERC20Permit.sol";
 import {SafeERC20} from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
-import {IBondingCurveFactory} from "./interfaces/IBondingCurveFactory.sol";
-import {IBondingCurve} from "./interfaces/IBondingCurve.sol";
-import {IFeeVault} from "./interfaces/IFeeVault.sol";
-import {IWMon} from "./interfaces/IWMon.sol";
-import {IGNad} from "./interfaces/IGNad.sol";
-import {BCLib} from "./lib/BCLib.sol";
-import {TransferLib} from "./lib/Transfer.sol";
-import "./errors/CustomErrors.sol" as CustomErrors;
+import {IBondingCurveFactory} from "../types/IBondingCurveFactory.sol";
+import {IBondingCurve} from "../types/IBondingCurve.sol";
+import {IFeeVault} from "../types/IFeeVault.sol";
+import {IWMon} from "../types/IWMon.sol";
+import {IGNad} from "../types/IGNad.sol";
+import {BCLib} from "../utils/BCLib.sol";
+import {TransferLib} from "../utils/Transfer.sol";
+import "../errors/CustomErrors.sol" as CustomErrors;
 
 /**
  * @title Gnad

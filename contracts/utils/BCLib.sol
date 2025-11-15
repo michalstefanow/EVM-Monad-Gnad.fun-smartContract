@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
-import {IBondingCurve} from "../interfaces/IBondingCurve.sol";
-import {IBondingCurveFactory} from "../interfaces/IBondingCurveFactory.sol";
+import {IBondingCurve} from "../types/IBondingCurve.sol";
+import {IBondingCurveFactory} from "../types/IBondingCurveFactory.sol";
 import "../errors/CustomErrors.sol" as CustomErrors;
 
 /**
