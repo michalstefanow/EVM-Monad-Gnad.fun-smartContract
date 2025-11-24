@@ -1,5 +1,3 @@
-[简体中文](./README_CN.md)
-
 # GNad.Fun Smart Contract
 
 ## Table of Contents
@@ -308,7 +306,3 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed development guidelines.
 ├── LICENSE                   # MIT License
 └── README.md                # This file
 ```
-
-📌 For questions or support, please open an issue in the GitHub repository.
-
-📖 Need help? Check out my [Support Guide](./SUPPORT.md)
